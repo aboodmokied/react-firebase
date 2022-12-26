@@ -1,5 +1,5 @@
 import { useState,useEffect } from 'react';
-import {getDocs,collection,addDoc,doc,updateDoc,deleteDoc} from '@firebase/firestore'
+import {getDocs,collection,doc,deleteDoc} from '@firebase/firestore'
 //getDocs(CollectionRef)
 //addDoc(CollectionRef,obj)
 //updateDoc(objRef,{newValues})
@@ -25,7 +25,6 @@ function App() {
     const getPosts=async()=>{
       try{
         const data=await getDocs(notesCollectionRef)
-        console.log(data)
         // data => docs[0].data()
         //id => docs[0].id
         const notes=data.docs.map(doc=>({...doc.data(),id:doc.id}))
