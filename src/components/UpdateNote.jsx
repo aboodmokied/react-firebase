@@ -20,7 +20,7 @@ function UpdateNote({setReload,db,id,setShowUpdate}) {
         setShowUpdate(false)
     }
   return (
-    <div className='relative w-screen h-full min-h-screen bg-zinc-900/60'>
+    <div className='relative w-screen h-screen bg-zinc-900/60'>
         <span
         onClick={()=>setShowUpdate(false)}
         className='absolute top-5 right-5 text-2xl text-white cursor-pointer hover:text-red-500 duration-150'><AiOutlineCloseCircle/></span>

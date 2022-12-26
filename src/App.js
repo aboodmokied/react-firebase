@@ -63,8 +63,8 @@ function App() {
     setShowUpdate(true)
   }
   return (
-    <div className='relative'>
-     {showUpdate&&(<div className='absolute top-0 left-0 z-10'>
+    <div className='relative h-screen'>
+     {showUpdate&&(<div className='fixed top-0 left-0 z-10'>
     <UpdateNote setReload={setReload} db={db} id={updateId} setShowUpdate={setShowUpdate}/>
       </div> )}
 
